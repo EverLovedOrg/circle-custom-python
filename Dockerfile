@@ -1,4 +1,4 @@
-FROM circleci/python:3.6.8-node
+FROM circleci/python:3.7.3-node
 
 # Install dependencies for PostGIS
 RUN sudo apt-get install -y binutils libproj-dev gdal-bin
