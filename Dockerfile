@@ -1,4 +1,4 @@
-FROM circleci/python:3.9.2-buster
+FROM circleci/python:3.9.4-buster
 
 # Install dependencies for PostGIS
 RUN sudo apt-get install -y binutils libproj-dev gdal-bin
