@@ -1,4 +1,4 @@
-FROM cimg/python:3.9.9
+FROM cimg/python:3.10.0
 
 # Update packages
 RUN sudo apt-get update
