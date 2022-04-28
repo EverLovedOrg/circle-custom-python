@@ -1,13 +1,10 @@
 FROM cimg/python:3.10.4
 
-# Update packages
-RUN sudo apt-get update
-
-# Install dependencies for PostGIS
-RUN sudo apt-get install -y binutils libproj-dev gdal-bin
-
-# Install dependencies for WeasyPrint
-RUN sudo apt-get install -y libpango-1.0-0 libpangoft2-1.0-0
+# Install the necessary libraries for PostGIS, WeasyPrint and pdf2image.
+RUN sudo apt-get update && \
+    sudo apt-get install -y --no-install-recommends binutils libproj-dev gdal-bin && \
+    sudo apt-get install -y --no-install-recommends libpango-1.0-0 libpangoft2-1.0-0 && \
+    sudo apt-get install -y --no-install-recommends poppler-utils
 
 # Add fonts
 ADD fonts /usr/share/fonts/truetype/
