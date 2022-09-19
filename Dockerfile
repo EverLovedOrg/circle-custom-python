@@ -1,4 +1,4 @@
-FROM cimg/python:3.10.6
+FROM cimg/python:3.10.7
 
 # Install the necessary libraries for PostGIS, WeasyPrint and pdf2image.
 RUN sudo apt-get update && \
